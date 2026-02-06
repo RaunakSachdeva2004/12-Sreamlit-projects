@@ -5,9 +5,9 @@ from PIL import Image
 
 
 
-# image = Image.open('logo.jpg')
+image = Image.open('logo.jpg')
 
-# st.image(image, use_column_width=True)
+st.image(image, width=250)
 
 st.write("""
 # DNA Nucleotide Count Werb App
