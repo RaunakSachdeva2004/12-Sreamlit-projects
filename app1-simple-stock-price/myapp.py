@@ -15,7 +15,7 @@ tickerSymbol = "GOOGL"
 tickerData = yf.Ticker(tickerSymbol)
 start = '2020-01-01'
 end = '2023-01-01'
-tickerDf = tickerData.history(period= '2mo')
+tickerDf = tickerData.history(period= '2y')
 
 ## OR
 
@@ -24,5 +24,14 @@ tickerDf = tickerData.history(period= '2mo')
 #     end='2023-01-01'
 # )
 
+
+st.write("""
+        ### Closing Price
+""")
 st.line_chart(tickerDf['Close'])
+
+
+st.write("""
+        ### Volume Price
+""")
 st.line_chart(tickerDf['Volume'])
